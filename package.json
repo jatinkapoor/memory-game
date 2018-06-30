@@ -3,14 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.2.3",
-    "@material-ui/icons": "^1.1.0",
     "mdbreact": "^4.5.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-scripts": "1.1.4",
-    "reshake": "^1.0.8",
     "shuffle-array": "^1.0.1"
   },
   "scripts": {

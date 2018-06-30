@@ -62,6 +62,7 @@ class App extends Component {
   state = {
     topScore: 0,
     currentScore: 0,
+    currentText: 'Click an image to begin !',
     imageClickCounter: {
       img1Counter: 0,
       img2Counter: 0,
@@ -88,12 +89,14 @@ class App extends Component {
       if (numOfTimesClicked < 1) {
         stateCopy.currentScore = stateCopy.currentScore + 1;
         stateCopy.imageClickCounter[imageName] = stateCopy.imageClickCounter[imageName] + 1;
+        stateCopy.currentText = 'You guessed correctly !'
         if (stateCopy.topScore < stateCopy.currentScore) {  
           stateCopy.topScore = stateCopy.topScore + 1;
         }
         this.setState(stateCopy)
       } else {
         stateCopy.currentScore = 0
+        stateCopy.currentText = 'You guessed incorrectly !'
         Object.keys(stateCopy.imageClickCounter).forEach(e => stateCopy.imageClickCounter[e] = 0);
         this.setState(stateCopy)
       } 
@@ -104,7 +107,8 @@ class App extends Component {
     const shuffledImageArray = shuffle(ImageArray);
     return (
       <div>
-        <Header />
+        <Header 
+          currentText={this.state.currentText}/>
         <ScoreCard
           currentScore={this.state.currentScore} 
           topScore={this.state.topScore}
