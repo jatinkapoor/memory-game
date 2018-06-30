@@ -1,10 +1,16 @@
 .scoreSection {
-  background: linear-gradient(45deg, rgb(202, 102, 102) 30%, rgb(230, 230, 42) 90%);
+  background: linear-gradient(45deg, rgb(202, 102, 102) 30%, rgb(42, 230, 83) 90%);
   height: 100px;
+  width: 100%;
 }
 
 .score {
   padding: 20px;
   color: blue;
+  font-size: 50px;
 }
 
+.myScore {
+  padding: 5%;
+  padding-left: 45%;
+}
