@@ -1,0 +1,10 @@
+.scoreSection {
+  background: linear-gradient(45deg, rgb(202, 102, 102) 30%, rgb(230, 230, 42) 90%);
+  height: 100px;
+}
+
+.score {
+  padding: 20px;
+  color: blue;
+}
+
